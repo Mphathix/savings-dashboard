@@ -57,24 +57,25 @@
                 <h1 class="text-2xl md:text-3xl font-semibold text-sky-700">Savings Dashboard</h1>
                 <p class="text-sm text-slate-600 mt-1">Weekly contributions - manager dashboard.</p>
             </div>
+        </header>
 
-            <div class="space-y-2 text-right">
-                <div class="bg-white p-3 rounded-lg shadow-sm flex gap-3 items-center">
-                    <div class="text-xs text-slate-500">Weekly amount</div>
-                    <input id="weeklyAmount" type="number" value="300" min="1"
-                        class="w-24 px-2 py-1 border rounded-md text-right" />
-                    <button id="saveAmountBtn" class="px-3 py-1 bg-sky-600 text-white rounded-md text-sm">Save</button>
+                <!-- Settings -->
+        <section class="bg-white p-4 rounded-lg shadow mb-6">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:gap-4">
+                <div class="flex items-center gap-2 mb-3 sm:mb-0">
+                    <label for="weeklyAmount" class="text-sm font-medium text-slate-700">Weekly Amount (R):</label>
+                    <input id="weeklyAmount" type="number" min="0" class="w-24 p-2 border rounded" />
+                    <button id="saveAmountBtn" class="px-3 py-2 bg-sky-600 text-white rounded">Save</button>
                 </div>
+                <div class="flex items-center gap-2">
+                    <button id="bulkPayBtn" class="px-3 py-2 bg-emerald-600 text-white rounded">Bulk Pay</button>
+                    <button id="exportBtn" class="px-3 py-2 bg-slate-600 text-white rounded">Export CSV</button>
+                    <button id="resetBtn" class="px-3 py-2 bg-red-600 text-white rounded">Reset All</button>
 
-                <div class="flex gap-2">
-                    <button id="bulkPayBtn" class="px-3 py-2 bg-sky-500 text-white rounded-md shadow-sm text-sm">Bulk
-                        Pay</button>
-                    <button id="exportBtn"
-                        class="px-3 py-2 border border-sky-500 text-sky-600 rounded-md text-sm">Export CSV</button>
-                    <button id="resetBtn" class="px-3 py-2 bg-rose-500 text-white rounded-md text-sm">Reset All</button>
                 </div>
             </div>
-        </header>
+        </section>
+
 
         <!-- Summary cards -->
 
@@ -470,4 +471,5 @@
 </body>
 
 </html>
+
 
